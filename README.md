@@ -20,9 +20,17 @@ The purpose of this Batch file is to perform a deep first search on every single
 ###  Usage
 ---
 
-1. Use Alt+F11 to copy and paste the code into VBA interface
+1. Put the bat files in the same folder where the master verification result files are saved
 
-<img src="https://github.com/y5mei/Saved-Pictures/blob/master/VBA1.jpg" style="zoom:100%;" />
+2. Change the filters to match the file names that you want to this script to check through in line 29. For example, I am matching every result file which contains the string "OP10" in its' file name with the code below:
 
-2. Setup the icon for this print method to File-> Options->Quick Access Toolbar
-<img src="https://github.com/y5mei/Saved-Pictures/blob/master/VBA2.jpg" style="zoom:100%;" />
+  `dir "%CD%\"*OP10*.RTF /b /o-d > fileslist.txt`
+
+3. Double click the bat file, a status report will automatically show up in the CMD terminal. The status report is in time descending order, and will show pass, fail or not finished with colour coding.
+
+### Demo
+
+___
+
+
+<img src="https://github.com/y5mei/Saved-Pictures/blob/master/RenishawDemo.gif" style="zoom:100%;"/>
